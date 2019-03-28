@@ -8,6 +8,14 @@ var targetScore;
 //Creates a reusable function that we can call on later.
 var gameStart = function () {
 
+//Array for the crystal images.
+    var images = [
+        'assets/images/blue.png',
+        'assets/images/purple.jpg',
+        'assets/images/green.png',
+        'assets/images/red.png'
+    ];
+
 //Resets the crystals and prevents the error or creating more 
 //crystals after the game is reset.
 $(".crystals").empty();
@@ -22,7 +30,7 @@ $("#targetnumber").html('Your Target Number Is: ' + targetScore);
 // Generates 4 random numbers every time the browser is refreshed.
 for(var i = 0; i < 4; i++){
     var random = Math.floor((Math.random() * 13) + 2);
-    // testing console.log(random);
+    //testing console.log(random);
 
 
 //Makes 4 crystal divs with the class of "crystal" and each crystal is assigned 
@@ -32,6 +40,13 @@ for(var i = 0; i < 4; i++){
             "class": 'crystal',
             "data-random": random
         });
+
+//Gives the crystal divs a background image which it gets from the 
+//variable image array and indexes through it.
+        crystal.css({
+            "background-image":"url('" + images[i] + "')",
+            "background-size":"cover"
+        })
 
     $(".crystals").append(crystal);
 }
@@ -52,8 +67,14 @@ $(document).on('click', '.crystal', function () {
 //to the total score each time they are clicked.
     score += number;
 
+//Displays and updates the total score as crystals are clicked.
     $("#totalscore").html("Total Score: " + score);
 
+//Conditional logic for score keeping.
+//If the user score is more than the target score, the user loses,
+//loss counter goes up by one,
+//the score resets and the game starts again.
+//Same thing happens when the user hits the target score.
 
     if(score > targetScore){
         console.log("You lost!");
@@ -72,14 +93,5 @@ $(document).on('click', '.crystal', function () {
     
 
 });
-
-    var images = [
-        'assets/images/blue.png',
-        'assets/images/purple.png',
-        'assets/images/green.png',
-        'assets/images/red.png'
-    ];
-
-
 };
 
