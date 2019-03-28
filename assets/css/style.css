@@ -2,7 +2,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 20px;
     padding: 20px;
-    width: 50%;
+    width: 60%;
+    align-content: center;
 }
 
 #paragraph {
@@ -14,4 +15,17 @@ body {
     margin: 20px;
     padding: 20px;
     border: 1px solid green;
+}
+
+.crystals {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+}
+
+.crystal {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
 }
