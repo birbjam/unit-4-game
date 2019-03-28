@@ -9,15 +9,18 @@ body {
 }
 
 #paragraph {
+    margin: 20px;
     padding: 20px;
-    border: 1px solid black;
+    border: 1px solid #debbf5;
     background-color: #e0e0eb;
 }
 
 #targetnumber {
     margin: 20px;
     padding: 20px;
-    border: 1px solid green;
+    border: 5px solid #debbf5;
+    background-color: #dfff80;
+    width: 30%;
 }
 
 .crystals {
@@ -28,7 +31,20 @@ body {
 }
 
 .crystal {
-    border: 5px solid #cc80ff;
+    border: 5px solid #debbf5;
     height: 120px;
     width: 120px;
+}
+
+#totalscore {
+    margin: 20px;
+    padding: 20px;
+    border: 5px solid #debbf5;
+    background-color: #dfff80;
+    width: 30%;
+}
+
+#wins, #losses {
+    padding: 10px;
+    margin: 10px;
 }
