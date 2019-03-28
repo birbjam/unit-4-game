@@ -53,19 +53,20 @@ $(".crystal").on('click', function () {
     score += number;
 
     $("#totalscore").html("Total Score: " + score);
-    
-    console.log(score);
+
 
     if(score > targetScore){
         console.log("You lost!");
         losses++;
         $("#losses").html("Losses: " + losses);
+        score = 0;
         gameStart();
     }
     else if(score === targetScore){
         console.log("You win!");
         wins++;
         $("#wins").html("Wins: " + wins);
+        score = 0;
         gameStart();
     }
     
