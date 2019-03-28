@@ -42,7 +42,7 @@ gameStart();
 
 
 //When each crystal is clicked, the console logs the corresponding number.
-$(".crystal").on('click', function () {
+$(document).on('click', '.crystal', function () {
 
 //Converts the randomly generated numbers that correspond to each crystal from
 //strings to numbers to they can be operated on.
