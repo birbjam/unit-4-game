@@ -77,14 +77,14 @@ $(document).on('click', '.crystal', function () {
 //Same thing happens when the user hits the target score.
 
     if(score > targetScore){
-        console.log("You lost!");
+        //testing console.log("You lost!");
         losses++;
         $("#losses").html("Losses: " + losses);
         score = 0;
         gameStart();
     }
     else if(score === targetScore){
-        console.log("You win!");
+        //testing console.log("You win!");
         wins++;
         $("#wins").html("Wins: " + wins);
         score = 0;
